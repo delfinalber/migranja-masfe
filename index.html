@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <link rel="stylesheet" href="stilos.css">
+    <link rel="shortcout icon" href="imagenes/logo.png">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+    <div class="loader-container">
+        <div class="loader">
+            <div class="egg"></div>
+            <div class="loading-text">Cargando<span class="dot">.</span><span class="dot">.</span><span class="dot">.</span></div>
+        </div>
+    </div>
+
+    <script>
+        // Simula el cambio de página después de 2 segundos
+        setTimeout(function() {
+            document.querySelector('.loader-container').style.display = 'none';
+        }, 2000);
+    </script>
+
+    <header class="header">
+      <div class="logo">
+          <img src="imagenes/logo.png" alt="Logo de la marca">
+      </div>
+      <nav>
+         <ul class="nav-links">
+              <li><a href="index.html">Inicio</a></li>
+              <li><a href="productos.html">Productos</a></li>
+              <li><a href="contacto.html">Acerca de</a></li>
+         </ul>            
+      </nav>
+      <a class="btn" href="Info.html"><button>Contactos</button></a>
+  </header>
+
+  <div class="row" id="sectionindex"> 
+         
+    <a href="productos.html"> <img src="imagenes/portada.png" alt=""></a>
+
+</div>
+<div class="row">
+  <section id="inicio" >
+          <img src="imagenes/banner.png" >
+  </section>
+  
+
+  </div>
+</div>
+<div data-aos="zoom-in">
+<div class="slider">
+  <div class="slides">
+    
+      <div class="slide"><img src="imagenes/slider1.jpeg" alt="Imagen 1"></div>
+      <div class="slide"><img src="imagenes/slider2.jpeg" alt="Imagen 2"></div>
+      <div class="slide"><img src="imagenes/slider3.jpeg" alt="Imagen 3"></div>
+      <div class="slide"><img src="imagenes/slider4.jpeg" alt="Imagen 1"></div>
+      <div class="slide"><img src="imagenes/slider5.jpeg" alt="Imagen 2"></div>
+      <div class="slide"><img src="imagenes/slider6.jpeg" alt="Imagen 3"></div>
+       </div>
+  </div>
+</div>
+
+
+<script>
+  let currentIndex = 0;
+  const slides = document.querySelector('.slides');
+  const slideCount = document.querySelectorAll('.slide').length;
+
+  function showSlide(index) {
+      if (index >= slideCount) {
+          currentIndex = 0;
+      } else if (index < 0) {
+          currentIndex = slideCount - 1;
+      } else {
+          currentIndex = index;
+      }
+
+      slides.style.transform = `translateX(${-currentIndex * 100}%)`;
+  }
+
+  function nextSlide() {
+      showSlide(currentIndex + 1);
+  }
+
+  setInterval(nextSlide, 3000); // Cambia de imagen cada 3 segundos
+</script>
+
+
+
+
+
+<section class="three-section">
+  <div data-aos="zoom-in">
+  <div class="section-part">
+      <h3>¿Donde nos encontramos?</h3>
+      <img src="imagenes/ubicacion.png" alt="Referencia 1">
+      <p>Nos encontramos en el corazón de Campoalegre, Huila, en la Vereda Río Neiva, Cruce a Algeciras. Un sitio lleno de tradición y calidez que te invita a descubrir la frescura de nuestros productos. ¡Te esperamos para servirte con lo mejor!</p>
+  </div>
+</div>
+  <div data-aos="zoom-in">
+  <div class="section-part">
+      <h3>Conecta con nosotros</h3>
+      <img src="imagenes/redes.png" alt="Referencia 2">
+      <p>¡Queremos acercarnos a ti! Síguenos en redes sociales para recetas, consejos y novedades. Escríbenos por WhatsApp o correo si tienes preguntas. ¡Tu experiencia es nuestra prioridad, hagamos equipo!</p>
+  </div>
+</div>
+  <div data-aos="zoom-in">
+  <div class="section-part">
+      <h3>¿Por Qué Elegirnos?</h3>
+      <img src="imagenes/recomendado.png" alt="Referencia 3">
+      <p>Nos comprometemos a ofrecerte huevos frescos y de origen responsable. Criamos nuestras gallinas en condiciones naturales para garantizar calidad, sostenibilidad y confianza en cada compra. </p>
+  </div>
+</section>
+</div>
+
+  <footer class="footer">
+    <ul class="social-icon">
+      <li class="icon-elem">
+        <a href="https://www.youtube.com/@MIGRANJAMASFE" class="icon">
+          <ion-icon name="logo-youtube"></ion-icon>
+        </a>
+      </li>
+      <li class="icon-elem">
+        <a href="https://www.instagram.com/migranjamasfe?utm_source=qr&igsh=MTA1Nm1pcXJlY3o3cg=="target="_blank"  class="icon">
+          <ion-icon name="logo-instagram"> </ion-icon>
+        </a>
+      </li>
+      <li class="icon-elem">
+        <a href="https://wa.me/message/DRBHVLKFFVQYC1" target="_blank"  class="icon">
+          <ion-icon name="logo-whatsapp"></ion-icon>
+        </a>
+      </li>
+      <li class="icon-elem">
+        <a href="https://www.facebook.com/share/18JwMgPhsn/?mibextid=qi2Omg" target="_blank" class="icon" >
+          <ion-icon name="logo-facebook"></ion-icon>
+        </a>
+      </li>
+      <li class="icon-elem">
+        <a href="https://www.tiktok.com/@migranjamasfe?is_from_webapp=1&sender_device=pc" target="_blank"  class="icon">
+          <ion-icon name="logo-tiktok"></ion-icon>
+        </a>
+      </li>
+    </ul>
+    <ul class="menu">
+      <li class="menu-elem">
+        <a href="index.html" class="menu-icon"> Inicio </a>
+      </li>
+      <li class="menu-elem">
+        <a href="contacto.html" class="menu-icon"> Informacion </a>
+      </li>
+      <li class="menu-elem">
+        <a href="Info.html" class="menu-icon"> Contacto </a>
+      </li>
+    </ul>
+    <p class="text">2025 | Todos los derechos reservados</p>
+  </footer>
+  <script
+    type="module"
+    src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+  ></script>
+  <script
+    nomodule
+    src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+  ></script>
+</footer>
+
+</body>
+</html>
